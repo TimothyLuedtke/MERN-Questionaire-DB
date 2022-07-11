@@ -20,7 +20,7 @@ app.use(cors());
 
 // routes
 const questionsRouter = require("./routes/questions");
-app.use("/questions", questionsRouter);
+app.use("/", questionsRouter);
 
 // error handling middleware
 app.use((err, req, res, next) => {
@@ -32,3 +32,8 @@ app.use((err, req, res, next) => {
 // start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+
+// export app for testing
+module.exports = app;
+
+

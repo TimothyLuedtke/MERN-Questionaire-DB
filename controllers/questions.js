@@ -20,12 +20,21 @@ exports.getQuestionById = async (req, res) => {
 }
 
 exports.createQuestion = async (req, res) => {
-    try {
-        const question = await Question.create(req.body);
-        res.status(201).json(question);
-    } catch (err) {
-        res.status(500).json({ message: err.message });
+const question = new Question(req.body);
+try {
+    await question.save();
+    res.status(201).json({
+        status: "success",
+        data: {
+            question
     }
+    });
+} catch (err) {
+    res.status(500).json({ 
+        status: 'error',
+        message: err.message
+    });
+}
 }
 
 exports.updateQuestion = async (req, res) => {
