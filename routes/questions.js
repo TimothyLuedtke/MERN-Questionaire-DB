@@ -4,7 +4,6 @@ const router = express.Router();
 
 // controllers
 const {
-    getAllQuestions,
     getQuestionById,
     createQuestion,
     updateQuestion,
@@ -12,16 +11,15 @@ const {
     getQuestionsByFinanceCategory
 } = require("../controllers/questions");
 
-router.route("/AllQuestions").get(getAllQuestions);
 
-router.route("/QuestionByFinanceCategory/:category").get(getQuestionsByFinanceCategory);
+router.route("/questionbyfinancecategory/:category").get(getQuestionsByFinanceCategory);
 
-router.route("/Question/:id").get(getQuestionById);
+router.route("/question/:id").get(getQuestionById);
 
-router.route("/createQuestion").post(createQuestion);
+router.route("/createquestion").post(createQuestion);
 
-router.route("/updateQuestion/:id").put(updateQuestion);
+router.route("/updatequestion/:id").put(updateQuestion);
 
-router.route("/deleteQuestion/:id").delete(deleteQuestion);
+router.route("/deletequestion/:id").delete(deleteQuestion);
 
 module.exports = router;
