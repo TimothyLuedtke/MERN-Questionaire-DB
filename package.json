@@ -1,0 +1,30 @@
+{
+  "name": "mern-questionaire-db",
+  "version": "1.0.0",
+  "description": "creating an app for making questionaires",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "MERN Questionaire App"
+  },
+  "keywords": [
+    "MongoDB",
+    "Mongoose",
+    "Express",
+    "React",
+    "Node",
+    "CRUD"
+  ],
+  "author": "Timothy Luedtke",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "mongoose": "^6.4.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
